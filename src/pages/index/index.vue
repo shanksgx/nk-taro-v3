@@ -8,6 +8,9 @@
       <nut-button type="primary" @click="handleClick('text', msg2, true)">点我</nut-button>
       <nut-button type="primary" @click="onAdd">点我</nut-button>
     </view>
+    <div class="footer safe-area-bottom">
+      <nut-button type="primary" block>底部安全区域</nut-button>
+    </div>
     <nut-toast :msg="msg2" v-model:visible="show" :type="type" :cover="cover"/>
   </view>
 </template>
@@ -60,5 +63,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 </style>
