@@ -3,23 +3,28 @@
     <view>
       <img src="" alt="">
     </view>
-    {{ msg }} <Dongdong />
+    {{ msg }} <Dongdong /> {{ counter.count }}
     <view class="btn">
       <nut-button type="primary" @click="handleClick('text', msg2, true)">点我</nut-button>
+      <nut-button type="primary" @click="onAdd">点我</nut-button>
     </view>
     <nut-toast :msg="msg2" v-model:visible="show" :type="type" :cover="cover"/>
   </view>
 </template>
 
 <script>
-import { reactive, toRefs } from 'vue';
-import { Dongdong } from '@nutui/icons-vue-taro';
+import { reactive, toRefs } from 'vue'
+import { Dongdong } from '@nutui/icons-vue-taro'
+import { useCounterStore } from "../../store/counter"
+
 export default {
   name: 'Index',
   components: {
     Dongdong
   },
   setup() {
+    const counter = useCounterStore()
+
     const state = reactive({
       msg: '欢迎使用 NutUI4.0 开发小程序',
       msg2: '你成功了～',
@@ -35,9 +40,15 @@ export default {
       state.cover = cover;
     };
 
+    const onAdd = () => {
+      counter.$patch({count: counter.count + 1})
+    }
+
     return {
       ...toRefs(state),
-      handleClick
+      handleClick,
+      onAdd,
+      counter
     }
   }
 }
