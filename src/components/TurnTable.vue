@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <view>
     <turn-table
       class="turntable"
       ref="turntable"
@@ -16,7 +16,7 @@
     >
     </turn-table>
     <nut-toast :msg="msg" v-model:visible="show" @closed="show = false" />
-  </div>
+  </view>
 </template>
 <script>
 import { ref, reactive } from 'vue'
