@@ -4,6 +4,7 @@ specifiers:
   '@babel/core': ^7.8.0
   '@babel/runtime': ^7.7.7
   '@nutui/icons-vue-taro': ^0.0.9
+  '@nutui/nutui-bingo': ^1.0.7
   '@nutui/nutui-taro': ^4.0.0
   '@tarojs/cli': 3.6.2
   '@tarojs/components': 3.6.2
@@ -44,6 +45,7 @@ specifiers:
 dependencies:
   '@babel/runtime': 7.21.0
   '@nutui/icons-vue-taro': 0.0.9
+  '@nutui/nutui-bingo': 1.0.7
   '@nutui/nutui-taro': 4.0.2_gukcl7kz2zsa3mg46tfztplbd4
   '@tarojs/components': 3.6.2_vue@3.2.47
   '@tarojs/helper': 3.6.2
@@ -1617,6 +1619,16 @@ packages:
     resolution: {integrity: sha512-10VYAtFC+o1X0anGs+y2PgF1NWMeLFz2JVMRw4BWLg6wbtVbYy9wukLxyGhZC6Yf6t39DcwaGVda8paV7K6/Ew==}
     dev: false
 
+  /@nutui/nutui-bingo/1.0.7:
+    resolution: {integrity: sha512-7DAGBADhZR6cWNSjdBTgJjkbIphcfCKkAOLBfOL012AEWirlOnOSWPkyFuVL0F1lafUACVlR1/7uNCQYdHEUww==}
+    dependencies:
+      '@nutui/nutui': 3.3.6
+      sass: 1.58.3
+      vconsole: 3.15.0
+      vue: 3.2.47
+      vue-router: 4.1.6_vue@3.2.47
+    dev: false
+
   /@nutui/nutui-taro/4.0.2_gukcl7kz2zsa3mg46tfztplbd4:
     resolution: {integrity: sha512-Y8MJ1F4heyKoiJh3GspZdKIILFmCsC8zvRO2YUMbw498rxnP6v0SXbSc8sgIYobwj+TQmYVnLql9Fno0TVnPPQ==}
     peerDependencies:
@@ -1625,6 +1637,13 @@ packages:
       '@nutui/icons-vue-taro': 0.0.9
       sass: 1.58.3
       unplugin-vue-components: 0.23.0_vue@3.2.47
+    dev: false
+
+  /@nutui/nutui/3.3.6:
+    resolution: {integrity: sha512-Fyg8/cPqvkEVrmMk3CWP8lKfh3aNwDMHy2MVwHutEnofqZ4n0akomJNHqtN/ebIER69MqT2PgoE31T/t7mfAwA==}
+    dependencies:
+      consola: 2.15.3
+      sass: 1.58.3
     dev: false
 
   /@nuxt/kit/3.2.3:
@@ -2585,7 +2604,7 @@ packages:
     resolution: {integrity: sha512-jn7qwGFmJHwUSphV8zZneO3GmtlgLsmhs/LQyVvQbIIa+fzGMUiHI4HXJZL3FT8MJmgXWbLGiVVY7ElvHq6vDA==}
     deprecated: This is a stub types definition. sass provides its own type definitions, so you do not need this installed.
     dependencies:
-      sass: 1.50.0
+      sass: 1.58.3
 
   /@types/semver/7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
@@ -4630,6 +4649,11 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /copy-text-to-clipboard/3.1.0:
+    resolution: {integrity: sha512-PFM6BnjLnOON/lB3ta/Jg7Ywsv+l9kQGD4TWDCSlRBGmqnnTM5MrDkhAFgw+8HZt0wW6Q2BBE4cmy9sq+s9Qng==}
+    engines: {node: '>=12'}
+    dev: false
+
   /copy-webpack-plugin/10.2.0_webpack@5.69.0:
     resolution: {integrity: sha512-my6iXII95c78w14HzYCNya5TlJYa44lOppAge5GSTMM1SyDxNsVGCJvhP4/ld6snm8lzjn3XOonMZD6s1L86Og==}
     engines: {node: '>= 12.20.0'}
@@ -4664,7 +4688,6 @@ packages:
   /core-js/3.29.0:
     resolution: {integrity: sha512-VG23vuEisJNkGl6XQmFJd3rEG/so/CNatqeE+7uZAwTSwFeB/qaO0be8xZYUNWprJ/GIwL8aMt9cj1kvbpTZhg==}
     requiresBuild: true
-    dev: true
 
   /core-util-is/1.0.2:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
@@ -9375,6 +9398,10 @@ packages:
       minimatch: 3.1.2
     dev: true
 
+  /mutation-observer/1.0.3:
+    resolution: {integrity: sha512-M/O/4rF2h776hV7qGMZUH3utZLO/jK7p8rnNgGkjKUw8zCGjRQPxB8z6+5l8+VjRUQ3dNYu4vjqXYLr+U8ZVNA==}
+    dev: false
+
   /mute-stream/0.0.7:
     resolution: {integrity: sha512-r65nCZhrbXXb6dXOACihYApHw2Q6pV0M3V0PSxd74N0+D8nzAdEAITq2oAjA1jVnKI+tGvEBUpqiMh0+rW6zDQ==}
     dev: true
@@ -11494,6 +11521,7 @@ packages:
       chokidar: 3.5.3
       immutable: 4.2.4
       source-map-js: 1.0.2
+    dev: true
 
   /sass/1.58.3:
     resolution: {integrity: sha512-Q7RaEtYf6BflYrQ+buPudKR26/lH+10EmO9bBqbmPh/KeLqv8bjpTNqxe71ocONqXq+jYiCbpPUmQMS+JJPk4A==}
@@ -11563,7 +11591,7 @@ packages:
       loglevel: 1.8.1
       loglevel-plugin-prefix: 0.8.4
       pretty-bytes: 5.6.0
-      sass: 1.50.0
+      sass: 1.58.3
       tslib: 1.14.1
 
   /scss-parser/1.0.6:
@@ -13130,6 +13158,15 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
+  /vconsole/3.15.0:
+    resolution: {integrity: sha512-8hq7wabPcRucSWQyN7/1tthMawP9JPvM95zgtMHpPknMMMCKj+abpoK7P7oKK4B0qw58C24Mdvo9+raUdpHyVQ==}
+    dependencies:
+      '@babel/runtime': 7.21.0
+      copy-text-to-clipboard: 3.1.0
+      core-js: 3.29.0
+      mutation-observer: 1.0.3
+    dev: false
+
   /verror/1.10.0:
     resolution: {integrity: sha512-ZZKSmDAEFOijERBLkmYfJ+vmk3w+7hOLYDNkRCuRuMJGEmqYNCNLyBBFwWKVMhfwaEF3WOd0Zlw86U/WC/+nYw==}
     engines: {'0': node >=0.6.0}
@@ -13242,6 +13279,15 @@ packages:
       vue: 3.2.47
       webpack: 5.69.0
     dev: true
+
+  /vue-router/4.1.6_vue@3.2.47:
+    resolution: {integrity: sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.5.0
+      vue: 3.2.47
+    dev: false
 
   /vue/3.2.47:
     resolution: {integrity: sha512-60188y/9Dc9WVrAZeUVSDxRQOZ+z+y5nO2ts9jWXSTkMvayiWxCWOWtBQoYjLeccfXkiiPZWAHcV+WTPhkqJHQ==}

@@ -10,6 +10,9 @@
       >
       <nut-button type="primary" @click="onAdd">点我</nut-button>
     </view>
+    <view class="turn-table">
+      <turn-table></turn-table>
+    </view>
     <div class="footer safe-area-bottom">
       <nut-button type="primary" block>底部安全区域</nut-button>
     </div>
@@ -21,11 +24,13 @@
 import { reactive, toRefs } from 'vue'
 import { Dongdong } from '@nutui/icons-vue-taro'
 import { useCounterStore } from '../../store/counter'
+import TurnTable from '../../components/TurnTable.vue'
 
 export default {
   name: 'Index',
   components: {
-    Dongdong
+    Dongdong,
+    TurnTable
   },
   setup() {
     const counter = useCounterStore()
